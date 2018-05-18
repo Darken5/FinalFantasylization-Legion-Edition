@@ -811,17 +811,17 @@ function FinalFantasylization_GetMusic()
 		-- Deeprun Tram
 			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
-		-- Dun Morogh
-			elseif ( MapID == 27 ) then
+		-- Dun Morogh - Coldridge Valley ( Dwarf ) / New Tinkertown ( Gnome )
+			elseif ( MapID == 27 ) or ( MapID == 866 ) or ( MapID == 895 ) then
 				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
 		-- Duskwood
 			elseif ( MapID == 34 ) then
 				FinalFantasylization_EasternKingdomsZones_Duskwood(SubZoneName)
-		-- Elwynn Forest
-			elseif ( MapID == 30 ) then
+		-- Elwynn Forest - Northshire ( Human )
+			elseif ( MapID == 30 ) or ( MapID == 864 ) then
 				FinalFantasylization_EasternKingdomsZones_ElwynnForest(SubZoneName)
-		-- Eversong Woods
-			elseif ( MapID == 462  ) then
+		-- Eversong Woods - Sunstrider Isle ( Blood Elf )
+			elseif ( MapID == 462  ) or ( MapID == 893 ) then
 				FinalFantasylization_EasternKingdomsZones_EversongWoods(SubZoneName)
 		-- Ghostlands
 			elseif ( MapID == 463 ) then
@@ -865,8 +865,8 @@ function FinalFantasylization_GetMusic()
 		-- Stormwind City
 			elseif ( MapID == 301 ) and not IsInInstance() then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
-		-- Tirisfal Glades
-			elseif ( MapID == 20 ) then
+		-- Tirisfal Glades - Deathknell ( Undead )
+			elseif ( MapID == 20 ) or ( MapID == 892 ) then
 				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
 		-- Undercity
 			elseif ( MapID == 382 ) then
@@ -888,8 +888,8 @@ function FinalFantasylization_GetMusic()
 		-- Azshara
 			elseif ( MapID == 181 ) then
 				FinalFantasylization_KalimdorZones_Azshara(SubZoneName)
-		-- Azuremyst Isle
-			elseif ( MapID == 464 ) then
+		-- Azuremyst Isle - Ammen Vale ( Draenei )
+			elseif ( MapID == 464 ) or ( MapID == 894 ) then
 				FinalFantasylization_KalimdorZones_AzuremystIsle(SubZoneName)
 		-- Bloodmyst Isle
 			elseif ( MapID == 476 ) then
@@ -903,14 +903,14 @@ function FinalFantasylization_GetMusic()
 		-- Desolace
 			elseif ( MapID == 101 ) then
 				FinalFantasylization_KalimdorZones_Desolace(SubZoneName)
-		-- Durotar
-			elseif ( MapID == 4 ) or ( MapID == 889 ) then
+		-- Durotar - Valley of Trials ( Orc ) / Echo Isles ( Troll )
+			elseif ( MapID == 4 ) or ( MapID == 889 ) or ( MapID == 891 ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
 		-- The Exodar
 			elseif ( MapID == 471 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
-		-- Mulgore
-			elseif ( MapID == 9 ) then
+		-- Mulgore - Camp Narache ( Tauren )
+			elseif ( MapID == 9 ) or ( MapID == 890 ) then
 				FinalFantasylization_KalimdorZones_Mulgore(SubZoneName)
 		-- Northern Barrens
 			elseif ( MapID == 11 ) then
@@ -924,8 +924,8 @@ function FinalFantasylization_GetMusic()
 		-- Stonetalon Mountains
 			elseif ( MapID == 81 ) then
 				FinalFantasylization_KalimdorZones_StonetalonMountains(SubZoneName)
-		-- Teldrassil
-			elseif ( MapID == 41 ) then
+		-- Teldrassil - Shadowglen ( Night Elf )
+			elseif ( MapID == 41 ) or ( MapID == 888 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
 		-- Thunder Bluff
 			elseif ( MapID == 362 ) then
@@ -935,7 +935,7 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' Maelstrom Zones
 --'==========================================================================================
-		-- Kezan
+		-- Kezan ( Goblin )
 			elseif ( MapID == 605 ) then
 				FinalFantasylization_MaelstromZones_Kezan(SubZoneName)
 		-- The Lost Isles
