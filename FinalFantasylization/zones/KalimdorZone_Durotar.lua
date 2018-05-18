@@ -18,15 +18,18 @@ function FinalFantasylization_KalimdorZones_Durotar()
 --			Bloodtalon Shore				FinalFantasylization_Troll_Start_BloodtalonShore()
 --			Darkspear Isle					FinalFantasylization_Troll_Start_DarkspearIsle()
 --				Darkspear Hold					FinalFantasylization_Troll_Start_DarkspearHold()
+--				Darkspear Shore					FinalFantasylization_Troll_Start_DarkspearShore()
 --				Darkspear Training Grounds		FinalFantasylization_Troll_Start_DarkspearTrainingGrounds()
 --			Spitescale Cove					FinalFantasylization_Troll_Start_SpitescaleCove()
 --				Spitescale Cavern					FinalFantasylization_Troll_Start_SpitescaleCavern()
---			Zalazane's Fall					FinalFantasylization_Troll_Start_ZalazanesFall()
+--				Zalazane's Fall					FinalFantasylization_Troll_Start_ZalazanesFall()
 --	Horde:
 --		Razor Hill						FinalFantasylization_HordeTownRazorHill()
 --			Razor Hill Barracks				FinalFantasylization_HordeTownRazorHillBarracks()
+--		Razor Hill Outskirts			FinalFantasylization_HordeTownRazorHillOutskirts()
 --			Razor Hill Watchtower			FinalFantasylization_HordeTownRazorHillWatchtower()
 --		Sen'jin Village					FinalFantasylization_HordeTownSenjinVillage()
+--		Sen'jin Village Outskirts		FinalFantasylization_HordeTownSenjinVillageOutskirts()
 --
 --	SUBZONES:
 --	Bladefist Bay					FinalFantasylization_SubzoneBladefistBay()
@@ -187,6 +190,24 @@ function FinalFantasylization_KalimdorZones_Durotar()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Durotar: Troll Starting Area: Darkspear Shore
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Darkspear Shore"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Troll_Start_DarkspearShore()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Durotar: Troll Starting Area: Darkspear Training Grounds
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Darkspear Training Grounds"] ) then
@@ -280,7 +301,25 @@ function FinalFantasylization_KalimdorZones_Durotar()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Durotar Horde Town: Razor Hill Watchtower in Razor Hill
+	--' Durotar Horde Town: Razor Hill Outskirts
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Razor Hill Outskirts"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownRazorHillOutskirts()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Durotar Horde Town: Razor Hill Watchtower
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Razor Hill Watchtower"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
@@ -306,6 +345,24 @@ function FinalFantasylization_KalimdorZones_Durotar()
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_HordeTownSenjinVillage()
+			elseif ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
+				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
+			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Durotar Horde Town: Sen'jin Village Outskirts
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Sen'jin Village Outskirts"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_CurrentZone = SubZoneName
+			if ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_HordeTownSenjinVillageOutskirts()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
