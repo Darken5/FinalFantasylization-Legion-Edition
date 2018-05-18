@@ -317,7 +317,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
 --		Blades & Axes
-	function FinalFantasylization_SilvermoonCity_SubzoneBlades&Axes()
+	function FinalFantasylization_SilvermoonCity_SubzoneBladesAxes()
 		FinalFantasylization_PlayMusic(S .. SilvermoonCitySong);
 		FinalFantasylization_debugMsg("SilvermoonCitySong")
 	end
@@ -1385,118 +1385,118 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	TOWNS:
 --	Dwarf Start:
---	Coldridge Valley
+--		Coldridge Valley
 	function FinalFantasylization_Dwarf_Start_ColdridgeValley()
 		FinalFantasylization_SnowSong();
 	end
---		Anvilmar
+--			Anvilmar
 	function FinalFantasylization_Dwarf_Start_Anvilmar()
 		FinalFantasylization_AllianceTowns();
 	end
---		Coldridge Pass
+--			Coldridge Pass
 	function FinalFantasylization_Dwarf_Start_ColdridgePass()
 		FinalFantasylization_SnowSong();
 	end
---		Frostmane Hovel
+--			Frostmane Hovel
 	function FinalFantasylization_Dwarf_Start_FrostmaneHovel()
 		FinalFantasylization_CaveSong();
 	end
---		Whitebeard's Encampment
+--			Whitebeard's Encampment
 	function FinalFantasylization_Dwarf_Start_WhitebeardsEncampment()
 		FinalFantasylization_SnowSong();
 	end
 --	Gnome Start:
---	Chill Breeze Valley
+--		Chill Breeze Valley
 	function FinalFantasylization_Gnome_Start_ChillBreezeValley()
 		FinalFantasylization_SnowSong();
 	end
---		Brewnall Village
+--			Brewnall Village
 	function FinalFantasylization_Gnome_Start_BrewnallVillage()
 		FinalFantasylization_AllianceTowns();
 	end
---		Crushcog's Arsenal
+--			Crushcog's Arsenal
 	function FinalFantasylization_Gnome_Start_CrushcogsArsenal()
 
 	end
---		Frostmane Hold
+--			Frostmane Hold
 	function FinalFantasylization_Gnome_Start_FrostmaneHold()
 
 	end
---		Gnomeregan
+--			Gnomeregan
 	function FinalFantasylization_Gnome_Start_Gnomeregan()
 
 	end
---			The Clockwerk Run
+--				The Clockwerk Run
 	function FinalFantasylization_Gnome_Start_TheClockwerkRun()
 
 	end
---			Loading Room
+--				Loading Room
 	function FinalFantasylization_Gnome_Start_LoadingRoom()
 
 	end
---			The Old Dormitory
+--				The Old Dormitory
 	function FinalFantasylization_Gnome_Start_TheOldDormitory()
 
 	end
---			Train Depot
+--				Train Depot
 	function FinalFantasylization_Gnome_Start_TrainDepot()
 
 	end
---			Workshop Entrance
+--				Workshop Entrance
 	function FinalFantasylization_Gnome_Start_WorkshopEntrance()
 
 	end
---		Iceflow Lake
+--			Iceflow Lake
 	function FinalFantasylization_Gnome_Start_IceflowLake()
 		FinalFantasylization_SnowSong();
 	end
---		New Tinkertown
+--			New Tinkertown
 	function FinalFantasylization_Gnome_Start_NewTinkertown()
 		FinalFantasylization_AllianceTowns();
 	end
---		The Toxic Airfield
+--			The Toxic Airfield
 	function FinalFantasylization_Gnome_Start_TheToxicAirfield()
 		FinalFantasylization_PlagueSong();
 	end
 --	Alliance:
---	Amberstill Ranch
+--		Amberstill Ranch
 	function FinalFantasylization_AllianceTownAmberstillRanch()
 		FinalFantasylization_AllianceTowns();
 	end
---	Gates of Ironforge
+--		Gates of Ironforge
 	function FinalFantasylization_AllianceTownGatesofIronforge()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
---	Gol'Bolar Quarry
+--		Gol'Bolar Quarry
 	function FinalFantasylization_AllianceTownGolBolarQuarry()
 		FinalFantasylization_AllianceTowns();
 	end
---	Ironforge Airfield
+--		Ironforge Airfield
 	function FinalFantasylization_AllianceTownIronforgeAirfield()
 		FinalFantasylization_AllianceTowns();
 	end
---	Kharanos
+--		Kharanos
 	function FinalFantasylization_AllianceTownKharanos()
 		FinalFantasylization_AllianceTowns();
 	end
---		Thunderbrew Distillery
+--			Thunderbrew Distillery
 	function FinalFantasylization_AllianceTownThunderbrewDistillery()
 		FinalFantasylization_AllianceTowns();
 	end
---	Misty Pine Refuge
+--		Misty Pine Refuge
 	function FinalFantasylization_AllianceTownMistyPineRefuge()
 		FinalFantasylization_AllianceTowns();
 	end
---	North Gate Outpost
+--		North Gate Outpost
 	function FinalFantasylization_AllianceTownNorthGateOutpost()
 		FinalFantasylization_AllianceTowns();
 	end
---	Steelgrill's Depot
+--		Steelgrill's Depot
 	function FinalFantasylization_AllianceTownSteelgrillsDepot()
 		FinalFantasylization_AllianceTowns();
 	end
---	South Gate Outpost
+--		South Gate Outpost
 	function FinalFantasylization_AllianceTownSouthGateOutpost()
 		FinalFantasylization_AllianceTowns();
 	end
