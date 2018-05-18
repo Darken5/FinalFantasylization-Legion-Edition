@@ -12,15 +12,20 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 --	Cleft of Shadow			FinalFantasylization_Orgrimmar_SubzoneCleftofShadow()
 --		Ragefire Chasm			FinalFantasylization_Orgrimmar_SubzoneRagefireChasm()
 --	The Drag				FinalFantasylization_Orgrimmar_SubzoneTheDrag()
---	Goblin Slums			FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
+--	Gates of Orgrimmar		FinalFantasylization_Orgrimmar_SubzoneGatesofOrgrimmar()
+--		Engineering Works		FinalFantasylization_Orgrimmar_SubzoneEngineeringWorks()
 --	Hall of Legends			FinalFantasylization_Orgrimmar_SubzoneHallofLegends()
 --	Valley of Honor			FinalFantasylization_Orgrimmar_SubzoneValleyofHonor()
 --		Hall of the Brave		FinalFantasylization_Orgrimmar_SubzoneHalloftheBrave()
 --		The Ring of Valor		FinalFantasylization_Orgrimmar_SubzoneTheRingofValor()
+--		The Wyvern's Tail		FinalFantasylization_Orgrimmar_SubzoneTheWyvernsTail()
 --	Valley of Spirits		FinalFantasylization_Orgrimmar_SubzoneValleyofSpirits()
 --	Valley of Strength		FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
+--		The Broken Tusk			FinalFantasylization_Orgrimmar_SubzoneTheBrokenTusk()
 --		Grommash Hold			FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
 --	Valley of Wisdom		FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+--		Miwana's Longhouse			FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
+--		The Western Earthshrine		FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
 	--'==========================================================================================
 	--' Orgrimmar: Horde Check
 	--'==========================================================================================
@@ -90,13 +95,26 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Orgrimmar: Goblin Slums
+	--' Orgrimmar: Gates of Orgrimmar
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["Goblin Slums"] ) then
+		elseif ( SubZoneName == SZ["Gates of Orgrimmar"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
+				FinalFantasylization_Orgrimmar_SubzoneGatesofOrgrimmar()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: Engineering Works in Orgrimmar Embassy
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Engineering Works"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneEngineeringWorks()
 			else
 				return
 			end
@@ -155,6 +173,19 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
+	--' Orgrimmar: The Wyvern's Tail
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Wyvern's Tail"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneTheWyvernsTail()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
 	--' Orgrimmar: Valley of Spirits
 	--'==========================================================================================
 		elseif ( SubZoneName == SZ["Valley of Spirits"] ) then
@@ -175,6 +206,19 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_Orgrimmar_SubzoneValleyofStrength()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: The Broken Tusk
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Broken Tusk"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneTheBrokenTusk()
 			else
 				return
 			end
@@ -207,12 +251,38 @@ function FinalFantasylization_KalimdorZones_Orgrimmar()
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
+	--' Orgrimmar: Miwana's Longhouse in Valley of Wisdom
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Miwana's Longhouse"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Orgrimmar: The Western Earthshrine in Valley of Wisdom
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Western Earthshrine"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
 	--' Orgrimmar END
 	--'==========================================================================================
 		else
 			if FinalFantasylization_CurrentZone ~= ZoneName then
 				FinalFantasylization_CurrentZone = ZoneName
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn .. ZoneName)
 				FinalFantasylization_Kalimdor_Orgrimmar()
 			else
 				return

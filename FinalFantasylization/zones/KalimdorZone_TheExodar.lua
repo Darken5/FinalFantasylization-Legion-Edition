@@ -11,6 +11,7 @@ function FinalFantasylization_KalimdorZones_TheExodar()
 --	SUBZONES:
 --	The Crystal Hall		FinalFantasylization_TheExodar_SubzoneTheCrystalHall()
 --	Seat of the Naaru		FinalFantasylization_TheExodar_SubzoneSeatoftheNaaru()
+--		The Exobar				FinalFantasylization_TheExodar_SubzoneTheExobar()
 --	Trader's Tier			FinalFantasylization_TheExodar_SubzoneTradersTier()
 --	The Vault of Lights		FinalFantasylization_TheExodar_SubzoneTheVaultofLights()
 	--'==========================================================================================
@@ -63,6 +64,19 @@ function FinalFantasylization_KalimdorZones_TheExodar()
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_TheExodar_SubzoneSeatoftheNaaru()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' The Exodar: The Exobar in Seat of the Naaru
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["The Exobar"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_TheExodar_SubzoneTheExobar()
 			else
 				return
 			end

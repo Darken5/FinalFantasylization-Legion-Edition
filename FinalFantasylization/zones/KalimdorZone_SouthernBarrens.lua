@@ -19,8 +19,10 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --		Camp Una'fe			FinalFantasylization_HordeTownCampUnafe()
 --		Desolation Hold		FinalFantasylization_HordeTownDesolationHold()
 --		Hunter's Hill		FinalFantasylization_HordeTownHuntersHill()
---		Overgrown Camp		FinalFantasylization_HordeTownOvergrownCamp()
+--		Spearhead				FinalFantasylization_HordeTownSpearhead()
 --		Vendetta Point		FinalFantasylization_HordeTownVendettaPoint()
+--	Neutral:
+--		Overgrown Camp		FinalFantasylization_NeutralTownOvergrownCamp()
 -- 
 --	SUBZONES:
 --	Bael Modan				FinalFantasylization_SubzoneBaelModan()
@@ -41,7 +43,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --	Razorfen Kraul			FinalFantasylization_SubzoneRazorfenKraul()
 --	Ruins of Taurajo		FinalFantasylization_SubzoneRuinsofTaurajo()
 --	Southern Gold Road		FinalFantasylization_SubzoneSouthernGoldRoad()
---	Spearhead				FinalFantasylization_SubzoneSpearhead()
 --	The Stagnant Oasis		FinalFantasylization_SubzoneTheStagnantOasis()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
@@ -217,14 +218,14 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Southern Barrens Horde Town: Overgrown Camp
+	--' Southern Barrens Horde Town: Spearhead
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Overgrown Camp"] ) then
+	elseif ( SubZoneName == SZ["Spearhead"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownOvergrownCamp()
+				FinalFantasylization_HordeTownSpearhead()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -247,6 +248,19 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
 			end
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Southern Barrens Neutral Town: Overgrown Camp
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Overgrown Camp"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_NeutralTownOvergrownCamp()
 		else
 			return
 		end

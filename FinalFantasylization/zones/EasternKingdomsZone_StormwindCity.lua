@@ -24,6 +24,7 @@ function FinalFantasylization_EasternKingdomsZones_StormwindCity()
 --		SI:7								FinalFantasylization_StormwindCity_SubzoneSI7()
 --	Stormwind City Cemetery				FinalFantasylization_StormwindCity_SubzoneStormwindCityCemetery()
 --	Stormwind City Outskirts			FinalFantasylization_StormwindCity_SubzoneStormwindCityOutskirts()
+--		Lion's Rest							FinalFantasylization_StormwindCity_SubzoneLionsRest()
 --		Olivia's Pond						FinalFantasylization_StormwindCity_SubzoneOliviasPond()
 --		The Wollerton Stead					FinalFantasylization_StormwindCity_SubzoneTheWollertonStead()
 --		The Eastern Earthshrine				FinalFantasylization_StormwindCity_SubzoneTheEasternEarthshrine()
@@ -256,6 +257,19 @@ function FinalFantasylization_EasternKingdomsZones_StormwindCity()
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 				FinalFantasylization_StormwindCity_SubzoneStormwindCityOutskirts()
+			else
+				return
+			end
+			FinalFantasylization_IsPlaying = true
+			return
+	--'==========================================================================================
+	--' Stormwind City: Lion's Rest in Stormwind City Outskirts
+	--'==========================================================================================
+		elseif ( SubZoneName == SZ["Lion's Rest"] ) then
+			if FinalFantasylization_CurrentZone ~= SubZoneName then
+				FinalFantasylization_CurrentZone = SubZoneName
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+				FinalFantasylization_StormwindCity_SubzoneLionsRest()
 			else
 				return
 			end

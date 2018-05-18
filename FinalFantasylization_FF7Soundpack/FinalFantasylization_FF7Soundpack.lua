@@ -208,6 +208,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
+--		The Stonefire Tavern
+	function FinalFantasylization_Ironforge_SubzoneTheStonefireTavern()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
 --		Vault of Ironforge
 	function FinalFantasylization_Ironforge_SubzoneVaultofIronforge()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
@@ -230,6 +235,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		The High Seat
 	function FinalFantasylization_Ironforge_SubzoneTheHighSeat()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--		Cask 'n' Anvil
+	function FinalFantasylization_Ironforge_SubzoneCasknAnvil()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
@@ -260,6 +270,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Hall of Mysteries
 	function FinalFantasylization_Ironforge_SubzoneHallofMysteries()
+		FinalFantasylization_PlayMusic(S .. IronforgeSong);
+		FinalFantasylization_debugMsg("IronforgeSong")
+	end
+--	Old Ironforge
+	function FinalFantasylization_Ironforge_SubzoneOldIronforge()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
@@ -436,6 +451,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Stormwind City Outskirts
 	function FinalFantasylization_StormwindCity_SubzoneStormwindCityOutskirts()
+		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
+		FinalFantasylization_debugMsg("StormwindCitySong")
+	end
+--		Lion's Rest
+	function FinalFantasylization_StormwindCity_SubzoneLionsRest()
 		FinalFantasylization_PlayMusic(S .. StormwindCitySong);
 		FinalFantasylization_debugMsg("StormwindCitySong")
 	end
@@ -3656,6 +3676,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ExodarSong);
 		FinalFantasylization_debugMsg("ExodarSong")
 	end
+--		The Exobar
+	function FinalFantasylization_TheExodar_SubzoneTheExobar()
+		FinalFantasylization_PlayMusic(S .. ExodarSong);
+		FinalFantasylization_debugMsg("ExodarSong")
+	end
 --	Traders' Tier
 	function FinalFantasylization_TheExodar_SubzoneTradersTier()
 		FinalFantasylization_PlayMusic(S .. ExodarSong);
@@ -3699,8 +3724,13 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
---	Goblin Slums
-	function FinalFantasylization_Orgrimmar_SubzoneGoblinSlums()
+--	Gates of Orgrimmar
+	function FinalFantasylization_Orgrimmar_SubzoneGatesofOrgrimmar()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		Engineering Works
+	function FinalFantasylization_Orgrimmar_SubzoneEngineeringWorks()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
@@ -3724,6 +3754,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
+--		The Wyvern's Tail
+	function FinalFantasylization_Orgrimmar_SubzoneTheWyvernsTail()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
 --	Valley of Spirits
 	function FinalFantasylization_Orgrimmar_SubzoneValleyofSpirits()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
@@ -3734,6 +3769,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
+--		The Broken Tusk
+	function FinalFantasylization_Orgrimmar_SubzoneTheBrokenTusk()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
 --		Grommash Hold
 	function FinalFantasylization_Orgrimmar_SubzoneGrommashHold()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
@@ -3741,6 +3781,16 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Valley of Wisdom
 	function FinalFantasylization_Orgrimmar_SubzoneValleyofWisdom()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		Miwana's Longhouse
+	function FinalFantasylization_Orgrimmar_SubzoneMiwanasLonghouse()
+		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
+		FinalFantasylization_debugMsg("OrgrimmarSong")
+	end
+--		The Western Earthshrine
+	function FinalFantasylization_Orgrimmar_SubzoneTheWesternEarthshrine()
 		FinalFantasylization_PlayMusic(S .. OrgrimmarSong);
 		FinalFantasylization_debugMsg("OrgrimmarSong")
 	end
@@ -5590,13 +5640,18 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_HordeTownHuntersHill()
 		FinalFantasylization_HordeTowns();
 	end
---		Overgrown Camp
-	function FFinalFantasylization_HordeTownOvergrownCamp()
+--		Spearhead
+	function FinalFantasylization_HordeTownSpearhead()
 		FinalFantasylization_HordeTowns();
 	end
 --		Vendetta Point
 	function FinalFantasylization_HordeTownVendettaPoint()
 		FinalFantasylization_HordeTowns();
+	end
+--	Neutral:
+--		Overgrown Camp
+	function FinalFantasylization_NeutralTownOvergrownCamp()
+		FinalFantasylization_NeutralTowns();
 	end
 --	SUBZONES:
 --	Bael Modan
