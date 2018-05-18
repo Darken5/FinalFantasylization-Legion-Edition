@@ -811,7 +811,7 @@ function FinalFantasylization_GetMusic()
 		-- Deeprun Tram
 			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
-		-- Dun Morogh - Coldridge Valley ( Dwarf ) / New Tinkertown ( Gnome )
+		-- Dun Morogh - Coldridge Valley ( Dwarf ) / Chill Breeze Valley ( Gnome )
 			elseif ( MapID == 27 ) or ( MapID == 866 ) or ( MapID == 895 ) then
 				FinalFantasylization_EasternKingdomsZones_DunMorogh(SubZoneName)
 		-- Duskwood
