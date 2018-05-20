@@ -15,26 +15,24 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 --		Hardwrench Hideaway				FinalFantasylization_HordeTownHardwrenchHideaway()
 --	Neutral:
 --		Booty Bay						FinalFantasylization_NeutralTownBootyBay()
+--			The Salty Sailor Tavern			FinalFantasylization_NeutralTownTheSaltySailorTavern()
 --
 --	SUBZONES:
---	Blackwater Cove				FinalFantasylization_SubzoneBlackwaterCove()
---	Brashtide Attack Fleet		FinalFantasylization_SubzoneBrashtideAttackFleet()
---	The Crimson Veil			FinalFantasylization_SubzoneTheCrimsonVeil()
---	The Crystal Shore			FinalFantasylization_SubzoneTheCrystalShore()
---	Crystalvein Mine			FinalFantasylization_SubzoneCrystalveinMine()
---	The Damsel's Luck			FinalFantasylization_SubzoneTheDamselsLuck()
---	Gurubashi Arena				FinalFantasylization_SubzoneGurubashiArena()
---		Battle Ring					FinalFantasylization_SubzoneBattleRing()
---	Jaguero Isle				FinalFantasylization_SubzoneJagueroIsle()
---	Janeiro's Point				FinalFantasylization_SubzoneJaneirosPoint()
---	Mistvale Valley				FinalFantasylization_SubzoneMistvaleValley()
---	Nek'mani Wellspring			FinalFantasylization_SubzoneNekmaniWellspring()
---	The Riptide					FinalFantasylization_SubzoneTheRiptide()
---	Ruins of Aboraz				FinalFantasylization_SubzoneRuinsofAboraz()
---	Ruins of Jubuwal			FinalFantasylization_SubzoneRuinsofJubuwal()
---	Southern Savage Coast		FinalFantasylization_SubzoneSouthernSavageCoast()
---	Spirit Den					FinalFantasylization_SubzoneSpiritDen()
---	Wild Shore					FinalFantasylization_SubzoneWildShore()
+--	Bloodsail Compound		FinalFantasylization_SubzoneBloodsailCompound()
+--	The Crystal Shore		FinalFantasylization_SubzoneTheCrystalShore()
+--	Crystalvein Mine		FinalFantasylization_SubzoneCrystalveinMine()
+--	Gurubashi Arena			FinalFantasylization_SubzoneGurubashiArena()
+--	Jaguero Isle			FinalFantasylization_SubzoneJagueroIsle()
+--	Janeiro's Point			FinalFantasylization_SubzoneJaneirosPoint()
+--	Mistvale Valley			FinalFantasylization_SubzoneMistvaleValley()
+--		Spirit Den				FinalFantasylization_SubzoneSpiritDen()
+--	Nek'mani Wellspring		FinalFantasylization_SubzoneNekmaniWellspring()
+--	Ruins of Aboraz			FinalFantasylization_SubzoneRuinsofAboraz()
+--	Ruins of Jubuwal		FinalFantasylization_SubzoneRuinsofJubuwal()
+--	South Seas				FinalFantasylization_SubzoneSouthSeas()
+--	Southern Savage Coast	FinalFantasylization_SubzoneSouthernSavageCoast()
+--	The Sundering			FinalFantasylization_SubzoneTheSundering()
+--	Wild Shore				FinalFantasylization_SubzoneWildShore()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -114,39 +112,26 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: Blackwater Cove
+	--' Cape of Stranglethorn Neutral Town: The Salty Sailor Tavern
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Blackwater Cove"] ) then
+	elseif ( SubZoneName == SZ["The Salty Sailor Tavern"] ) and FinalFantasylizationOptions.Sleep == false then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBlackwaterCove()
+			FinalFantasylization_NeutralTownTheSaltySailorTavern()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: Brashtide Attack Fleet
+	--' Cape of Stranglethorn Subzone: Bloodsail Compound
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Brashtide Attack Fleet"] ) then
+	elseif ( SubZoneName == SZ["Bloodsail Compound"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBrashtideAttackFleet()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: The Crimson Veil
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Crimson Veil"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheCrimsonVeil()
+			FinalFantasylization_SubzoneBloodsailCompound()
 		else
 			return
 		end
@@ -179,19 +164,6 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: The Damsel's Luck
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Damsel's Luck"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheDamselsLuck()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Cape of Stranglethorn Subzone: Gurubashi Arena
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Gurubashi Arena"] ) then
@@ -199,19 +171,6 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneGurubashiArena()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: Battle Ring
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Battle Ring"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBattleRing()
 		else
 			return
 		end
@@ -257,6 +216,19 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Cape of Stranglethorn Subzone: Spirit Den
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Spirit Den"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneSpiritDen()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Cape of Stranglethorn Subzone: Nek'mani Wellspring
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Nek'mani Wellspring"] ) then
@@ -264,19 +236,6 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
 			FinalFantasylization_SubzoneNekmaniWellspring()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: The Riptide
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Riptide"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheRiptide()
 		else
 			return
 		end
@@ -309,6 +268,19 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
+	--' Cape of Stranglethorn Subzone: South Seas
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["South Seas"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneSouthSeas()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
 	--' Cape of Stranglethorn Subzone: Southern Savage Coast
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Southern Savage Coast"] ) then
@@ -322,13 +294,13 @@ function FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Cape of Stranglethorn Subzone: Spirit Den
+	--' Cape of Stranglethorn Subzone: The Sundering
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Spirit Den"] ) then
+	elseif ( SubZoneName == SZ["The Sundering"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSpiritDen()
+			FinalFantasylization_SubzoneTheSundering()
 		else
 			return
 		end
