@@ -19,7 +19,7 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --		Camp Una'fe			FinalFantasylization_HordeTownCampUnafe()
 --		Desolation Hold		FinalFantasylization_HordeTownDesolationHold()
 --		Hunter's Hill		FinalFantasylization_HordeTownHuntersHill()
---		Spearhead				FinalFantasylization_HordeTownSpearhead()
+--		Spearhead			FinalFantasylization_HordeTownSpearhead()
 --		Vendetta Point		FinalFantasylization_HordeTownVendettaPoint()
 --	Neutral:
 --		Overgrown Camp		FinalFantasylization_NeutralTownOvergrownCamp()
@@ -29,7 +29,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --		Bael'dun Keep			FinalFantasylization_SubzoneBaeldunKeep()
 --		Bael Modan Excavation	FinalFantasylization_SubzoneBaelModanExcavation()
 --	Battlescar				FinalFantasylization_SubzoneBattlescar()
---	Bramblescar				FinalFantasylization_SubzoneBramblescar()
 --	Fields of Blood			FinalFantasylization_SubzoneFieldsofBlood()
 --	Firestone Point			FinalFantasylization_SubzoneFirestonePoint()
 --	Frazzlecraz Motherlode	FinalFantasylization_SubzoneFrazzlecrazMotherlode()
@@ -37,13 +36,11 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 --	The Great Gate			FinalFantasylization_SubzoneTheGreatGate()
 --	The Great Sea			FinalFantasylization_SubzoneTheGreatSea()
 --	The High Road			FinalFantasylization_SubzoneTheHighRoad()
---	The Merchant Coast		FinalFantasylization_SubzoneTheMerchantCoast()
 --	The Overgrowth			FinalFantasylization_SubzoneTheOvergrowth()
 --		The Nightmare Scar		FinalFantasylization_SubzoneTheNightmareScar()
 --	Razorfen Kraul			FinalFantasylization_SubzoneRazorfenKraul()
 --	Ruins of Taurajo		FinalFantasylization_SubzoneRuinsofTaurajo()
---	Southern Gold Road		FinalFantasylization_SubzoneSouthernGoldRoad()
---	The Stagnant Oasis		FinalFantasylization_SubzoneTheStagnantOasis()
+--	Stonetalon Pass			FinalFantasylization_SubzoneStonetalonPass()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -319,19 +316,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Southern Barrens Subzone: Bramblescar
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Bramblescar"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBramblescar()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Southern Barrens Subzone: Fields of Blood
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["Fields of Blood"] ) then
@@ -423,19 +407,6 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Southern Barrens Subzone: The Merchant Coast
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Merchant Coast"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheMerchantCoast()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
 	--' Southern Barrens Subzone: The Overgrowth
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["The Overgrowth"] ) then
@@ -488,39 +459,13 @@ function FinalFantasylization_KalimdorZones_SouthernBarrens()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Southern Barrens Subzone: Southern Gold Road
+	--' Southern Barrens Subzone: Stonetalon Pass
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Southern Gold Road"] ) then
+	elseif ( SubZoneName == SZ["Stonetalon Pass"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSouthernGoldRoad()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Southern Barrens Subzone: Spearhead
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Spearhead"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSpearhead()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Southern Barrens Subzone: The Stagnant Oasis
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Stagnant Oasis"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheStagnantOasis()
+			FinalFantasylization_SubzoneStonetalonPass()
 		else
 			return
 		end

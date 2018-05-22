@@ -5655,6 +5655,10 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneGoldRoad()
 		FinalFantasylization_SandSong();
 	end
+--	The Great Divide
+	function FinalFantasylization_SubzoneTheGreatDivide()
+
+	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
 		FinalFantasylization_WaterSong();
@@ -5675,10 +5679,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	The Sludge Fen
 	function FinalFantasylization_SubzoneTheSludgeFen()
 		FinalFantasylization_SwampSong();
-	end
---	Southern Gold Road
-	function FinalFantasylization_SubzoneSouthernGoldRoad()
-		FinalFantasylization_SandSong();
 	end
 --	Southfury River
 	function FinalFantasylization_SubzoneSouthfuryRiver()
@@ -5778,10 +5778,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneBattlescar()
 
 	end
---	Bramblescar
-	function FinalFantasylization_SubzoneBramblescar()
-
-	end
 --	Fields of Blood
 	function FinalFantasylization_SubzoneFieldsofBlood()
 		FinalFantasylization_LandSong();
@@ -5811,10 +5807,6 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_SubzoneTheHighRoad()
 		FinalFantasylization_LandSong();
 	end
---	The Merchant Coast
-	function FinalFantasylization_SubzoneTheMerchantCoast()
-		FinalFantasylization_WaterSong();
-	end
 --	The Overgrowth
 	function FinalFantasylization_SubzoneTheOvergrowth()
 		FinalFantasylization_WarySong()
@@ -5832,16 +5824,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. DeadSong);
 		FinalFantasylization_debugMsg("DeadSong")
 	end
---	Southern Gold Road
-	function FinalFantasylization_SubzoneSouthernGoldRoad()
-
-	end
---	Spearhead
-	function FinalFantasylization_SubzoneSpearhead()
-
-	end
---	The Stagnant Oasis
-	function FinalFantasylization_SubzoneTheStagnantOasis()
+--	Stonetalon Pass
+	function FinalFantasylization_SubzoneStonetalonPass()
 
 	end
 --'==========================================================================================
