@@ -1,45 +1,49 @@
-function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
+function FinalFantasylization_KalimdorZones_DustwallowMarsh()
 --'==========================================================================================
---' Eastern Kingdoms Zones: Northern Stranglethorn
+--' Kalimdor Zones: Dustwallow Marsh
 --'==========================================================================================
---	Zone: Northern Stranglethorn				FinalFantasylization_EasternKingdomsNorthernStranglethorn()
+--	Zone: Dustwallow Marsh			FinalFantasylization_KalimdorDustwallowMarsh()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_EasternKingdomsNorthernStranglethornResting()
---		Player is Swimming		FinalFantasylization_EasternKingdomsNorthernStranglethornSwimming()
+--		Player is Resting		FinalFantasylization_KalimdorDustwallowMarshResting()
+--		Player is Swimming		FinalFantasylization_KalimdorDustwallowMarshSwimming()
 --
 --	TOWNS:
 --	Alliance:
---		Fort Livingston				FinalFantasylization_AllianceTownFortLivingston()
---		Rebel Camp					FinalFantasylization_AllianceTownRebelCamp()
+--		Theramore Isle			FinalFantasylization_AllianceTownTheramoreIsle()
+--			Foothold Citadel		FinalFantasylization_AllianceTownFootholdCitadel()
 --	Horde:
---		Bambala						FinalFantasylization_HordeTownBambala()
---		Grom'gol Base Camp			FinalFantasylization_HordeTownGromgolBaseCamp()
---	Neutral:
---		Nesingwary's Expedition		FinalFantasylization_NeutralTownNesingwarysExpedition()
+--		Brackenwall Village		FinalFantasylization_HordeTownBrackenwallVillage()
+--	Neutral
+--		Mudsprocket				FinalFantasylization_NeutralTownMudsprocket()
 --
 --	SUBZONES:
---	Bal'lal Ruins					FinalFantasylization_SubzoneBallalRuins()
---	Balia'mah Ruins					FinalFantasylization_SubzoneBaliamahRuins()
---	The Great Sea					FinalFantasylization_SubzoneTheGreatSea()
---	Kal'ai Ruins					FinalFantasylization_SubzoneKalaiRuins()
---	Kurzen's Compound				FinalFantasylization_SubzoneKurzensCompound()
---	Lake Nazferiti					FinalFantasylization_SubzoneLakeNazferiti()
---	Mizjah Ruins					FinalFantasylization_SubzoneMizjahRuins()
---	Mosh'Ogg Ogre Mound				FinalFantasylization_SubzoneMoshOggOgreMound()
---	Ruins of Zul'Kunda				FinalFantasylization_SubzoneRuinsofZulKunda()
---	Ruins of Zul'Mamwe				FinalFantasylization_SubzoneRuinsofZulMamwe()
---	The Savage Coast				FinalFantasylization_SubzoneTheSavageCoast()
---	The Stockpile					FinalFantasylization_SubzoneTheStockpile()
---	The Sundering					FinalFantasylization_SubzoneTheSundering()
---	Tkashi Ruins					FinalFantasylization_SubzoneTkashiRuins()
---	Venture Co. Base Camp			FinalFantasylization_SubzoneVentureCoBaseCamp()
---	Venture Co. Operations Center	FinalFantasylization_SubzoneVentureCoOperationsCenter()
---	The Vile Reef					FinalFantasylization_SubzoneTheVileReef()
---	Yojamba Isle					FinalFantasylization_SubzoneYojambaIsle()
---	Ziata'jai Ruins					FinalFantasylization_SubzoneZiatajaiRuins()
---	Zul'Gurub						FinalFantasylization_SubzoneZulGurub()
---	Zuuldaia Ruins					FinalFantasylization_SubzoneZuuldaiaRuins()
+--	Alcaz Island			FinalFantasylization_SubzoneAlcazIsland()
+--	Blackhoof Village		FinalFantasylization_SubzoneBlackhoofVillage()
+--	Bloodfen Burrow			FinalFantasylization_SubzoneBloodfenBurrow()
+--	Bluefen					FinalFantasylization_SubzoneBluefen()
+--	Darkmist Cavern			FinalFantasylization_SubzoneDarkmistCavern()
+--	The Dragonmurk			FinalFantasylization_SubzoneTheDragonmurk()
+--		The Den of Flame		FinalFantasylization_SubzoneTheDenofFlame()
+--		Stonemaul Ruins			FinalFantasylization_SubzoneStonemaulRuins()
+--	Dreadmurk Shore			FinalFantasylization_SubzoneDreadmurkShore()
+--	Dustwallow Bay			FinalFantasylization_SubzoneDustwallowBay()
+--		Nat's Landing			FinalFantasylization_SubzoneNatsLanding()
+--		Tidefury Cove			FinalFantasylization_SubzoneTidefuryCove()
+--	The Great Sea			FinalFantasylization_SubzoneTheGreatSea()
+--	Lost Point				FinalFantasylization_SubzoneLostPoint()
+--	North Point Tower		FinalFantasylization_SubzoneNorthPointTower()
+--	The Quagmire			FinalFantasylization_SubzoneTheQuagmire()
+--		Beezil's Wreck			FinalFantasylization_SubzoneBeezilsWreck()
+--		Direhorn Post			FinalFantasylization_SubzoneDirehornPost()
+--		Tabetha's Farm			FinalFantasylization_SubzoneTabethasFarm()
+--	Sentry Point			FinalFantasylization_SubzoneSentryPoint()
+--	Shady Rest Inn			FinalFantasylization_SubzoneShadyRestInn()
+--	Witch Hill				FinalFantasylization_SubzoneWitchHill()
+--		Swamplight Manor		FinalFantasylization_SubzoneSwamplightManor()
+--	Wyrmbog					FinalFantasylization_SubzoneWyrmbog()
+--		Emberstrife's Den		FinalFantasylization_SubzoneEmberstrifesDen()
+--		Onyxia's Lair			FinalFantasylization_SubzoneOnyxiasLair()
 	--'==========================================================================================
 	--'	Zone Event: Player is Resting
 	--'==========================================================================================
@@ -51,7 +55,7 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
 			end
 			FinalFantasylization_CurrentZone = "Sleeping"
-			FinalFantasylization_EasternKingdomsNorthernStranglethornResting()
+			FinalFantasylization_KalimdorDustwallowMarshResting()
 		else
 			return
 		end
@@ -63,21 +67,21 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 	elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
-			FinalFantasylization_EasternKingdomsNorthernStranglethornSwimming()
+			FinalFantasylization_KalimdorDustwallowMarshSwimming()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Alliance Town: Fort Livingston
+	--' Dustwallow Marsh Alliance Town: Theramore Isle
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Fort Livingston"] ) then
+	elseif ( SubZoneName == SZ["Theramore Isle"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownFortLivingston()
+				FinalFantasylization_AllianceTownTheramoreIsle()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -88,14 +92,14 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Alliance Town: Rebel Camp
+	--' Dustwallow Marsh Alliance Town: Foothold Citadel
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Rebel Camp"] ) then
+	elseif ( SubZoneName == SZ["Foothold Citadel"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_AllianceTownRebelCamp()
+				FinalFantasylization_AllianceTownFootholdCitadel()
 			elseif ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -106,14 +110,14 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Horde Town: Bambala
+	--' Dustwallow Marsh Horde Town: Brackenwall Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Bambala"] ) then
+	elseif ( SubZoneName == SZ["Brackenwall Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_CurrentZone = SubZoneName
 			if ( factionEnglish == "Horde" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownBambala()
+				FinalFantasylization_HordeTownBrackenwallVillage()
 			elseif ( factionEnglish == "Alliance" ) then
 				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
 				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
@@ -124,64 +128,176 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Horde Town: Grom'gol Base Camp
+	--' Dustwallow Marsh Neutral Town: Mudsprocket
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Grom'gol Base Camp"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_CurrentZone = SubZoneName
-			if ( factionEnglish == "Horde" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_HordeTownGromgolBaseCamp()
-			elseif ( factionEnglish == "Alliance" ) then
-				FinalFantasylization_debugMsg(FFZlib.Color.Crimson .. PlayerInHostileTown .. SubZoneName..", "..ZoneName..PlayerInHostile)
-				FinalFantasylization_HostileTowns() -- Music call for all towns you are hostile in.
-			end
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Northern Stranglethorn Neutral Town: Nesingwary's Expedition
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Nesingwary's Expedition"] ) then
+	elseif ( SubZoneName == SZ["Mudsprocket"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_NeutralTownNesingwarysExpedition()
+			FinalFantasylization_NeutralTownMudsprocket()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Bal'lal Ruins
+	--' Dustwallow Marsh Subzone: Alcaz Island
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Bal'lal Ruins"] ) then
+	elseif ( SubZoneName == SZ["Alcaz Island"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBallalRuins()
+			FinalFantasylization_SubzoneAlcazIsland()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Balia'mah Ruins
+	--' Dustwallow Marsh Subzone: Blackhoof Village
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Balia'mah Ruins"] ) then
+	elseif ( SubZoneName == SZ["Blackhoof Village"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneBaliamahRuins()
+			FinalFantasylization_SubzoneBlackhoofVillage()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: The Great Sea
+	--' Dustwallow Marsh Subzone: Bloodfen Burrow
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Bloodfen Burrow"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneBloodfenBurrow()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Bluefen
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Bluefen"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneBluefen()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Darkmist Cavern
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Darkmist Cavern"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDarkmistCavern()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: The Dragonmurk
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Dragonmurk"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheDragonmurk()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: The Den of Flame
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Den of Flame"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheDenofFlame()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Stonemaul Ruins
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Stonemaul Ruins"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneStonemaulRuins()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Dreadmurk Shore
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Dreadmurk Shore"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDreadmurkShore()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Dustwallow Bay
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Dustwallow Bay"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneDustwallowBay()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Nat's Landing
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Nat's Landing"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneNatsLanding()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: Tidefury Cove
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Tidefury Cove"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTidefuryCove()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Dustwallow Marsh Subzone: The Great Sea
 	--'==========================================================================================
 	elseif ( SubZoneName == SZ["The Great Sea"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
@@ -194,247 +310,182 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Kal'ai Ruins
+	--' Dustwallow Marsh Subzone: Lost Point
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Kal'ai Ruins"] ) then
+	elseif ( SubZoneName == SZ["Lost Point"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneKalaiRuins()
+			FinalFantasylization_SubzoneLostPoint()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Kurzen's Compound
+	--' Dustwallow Marsh Subzone: North Point Tower
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Kurzen's Compound"] ) then
+	elseif ( SubZoneName == SZ["North Point Tower"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneKurzensCompound()
+			FinalFantasylization_SubzoneNorthPointTower()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Lake Nazferiti
+	--' Dustwallow Marsh Subzone: The Quagmire
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Lake Nazferiti"] ) then
+	elseif ( SubZoneName == SZ["The Quagmire"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneLakeNazferiti()
+			FinalFantasylization_SubzoneTheQuagmire()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Mizjah Ruins
+	--' Dustwallow Marsh Subzone: Beezil's Wreck
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Mizjah Ruins"] ) then
+	elseif ( SubZoneName == SZ["Beezil's Wreck"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMizjahRuins()
+			FinalFantasylization_SubzoneBeezilsWreck()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Mosh'Ogg Ogre Mound
+	--' Dustwallow Marsh Subzone: Direhorn Post
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Mosh'Ogg Ogre Mound"] ) then
+	elseif ( SubZoneName == SZ["Direhorn Post"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMoshOggOgreMound()
+			FinalFantasylization_SubzoneDirehornPost()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Ruins of Zul'Kunda
+	--' Dustwallow Marsh Subzone: Tabetha's Farm
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ruins of Zul'Kunda"] ) then
+	elseif ( SubZoneName == SZ["Tabetha's Farm"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRuinsofZulKunda()
+			FinalFantasylization_SubzoneTabethasFarm()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Ruins of Zul'Mamwe
+	--' Dustwallow Marsh Subzone: Sentry Point
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ruins of Zul'Mamwe"] ) then
+	elseif ( SubZoneName == SZ["Sentry Point"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneRuinsofZulMamwe()
+			FinalFantasylization_SubzoneSentryPoint()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: The Savage Coast
+	--' Dustwallow Marsh Subzone: Shady Rest Inn
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Savage Coast"] ) then
+	elseif ( SubZoneName == SZ["Shady Rest Inn"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheSavageCoast()
+			FinalFantasylization_SubzoneShadyRestInn()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: The Stockpile
+	--' Dustwallow Marsh Subzone: Witch Hill
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Stockpile"] ) then
+	elseif ( SubZoneName == SZ["Witch Hill"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheStockpile()
+			FinalFantasylization_SubzoneWitchHill()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: The Sundering
+	--' Dustwallow Marsh Subzone: Swamplight Manor
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Sundering"] ) then
+	elseif ( SubZoneName == SZ["Swamplight Manor"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheSundering()
+			FinalFantasylization_SubzoneSwamplightManor()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Tkashi Ruins
+	--' Dustwallow Marsh Subzone: Wyrmbog
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Tkashi Ruins"] ) then
+	elseif ( SubZoneName == SZ["Wyrmbog"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTkashiRuins()
+			FinalFantasylization_SubzoneWyrmbog()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Venture Co. Base Camp
+	--' Dustwallow Marsh Subzone: Emberstrife's Den
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Venture Co Base Camp"] ) then
+	elseif ( SubZoneName == SZ["Emberstrife's Den"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneVentureCoBaseCamp()
+			FinalFantasylization_SubzoneEmberstrifesDen()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Venture Co. Operations Center
+	--' Dustwallow Marsh Subzone: Onyxia's Lair
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Venture Co. Operations Center"] ) then
+	elseif ( SubZoneName == SZ["Onyxia's Lair"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneVentureCoOperationsCenter()
+			FinalFantasylization_SubzoneOnyxiasLair()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: The Vile Reef
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Vile Reef"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheVileReef()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Yojamba Isle
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Yojamba Isle"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneYojambaIsle()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Ziata'jai Ruins
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Ziata'jai Ruins"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneZiatajaiRuins()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Zul'Gurub
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Zul'Gurub"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneZulGurub()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Northern Stranglethorn Subzone: Zuuldaia Ruins
-	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Zuuldaia Ruins"] ) then
-		if FinalFantasylization_CurrentZone ~= SubZoneName then
-			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneZuuldaiaRuins()
-		else
-			return
-		end
-		FinalFantasylization_IsPlaying = true
-		return
-	--'==========================================================================================
-	--' Northern Stranglethorn END
+	--' Dustwallow Marsh END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_EasternKingdomsNorthernStranglethorn()
+			FinalFantasylization_KalimdorDustwallowMarsh()
 			FinalFantasylization_IsPlaying = true
 		else
 			return
