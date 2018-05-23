@@ -906,8 +906,14 @@ function FinalFantasylization_GetMusic()
 		-- Durotar - Valley of Trials ( Orc ) / Echo Isles ( Troll )
 			elseif ( MapID == 4 ) or ( MapID == 889 ) or ( MapID == 891 ) then
 				FinalFantasylization_KalimdorZones_Durotar(SubZoneName)
+		-- Dustwallow Marsh
+			elseif ( MapID == 141 ) then
+				FinalFantasylization_KalimdorZones_DustwallowMarsh(SubZoneName)
 		-- The Exodar
 			elseif ( MapID == 471 ) then
+				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Feralas
+			elseif ( MapID == 121 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
 		-- Mulgore - Camp Narache ( Tauren )
 			elseif ( MapID == 9 ) or ( MapID == 890 ) then
@@ -944,7 +950,7 @@ function FinalFantasylization_GetMusic()
 
 
 	-- Debug: Zone Catch-all
-			else
+			elseif not IsInInstance() then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
 			end
 		end
