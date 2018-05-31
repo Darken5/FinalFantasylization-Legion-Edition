@@ -1,6 +1,6 @@
 --#######################################
 --##
---##	   FinalFantasylization 4.0.0
+--##	   FinalFantasylization 7.0.0
 --##
 --##	     Final Fantasy 7 
 --##
@@ -1440,11 +1440,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --			Crushcog's Arsenal
 	function FinalFantasylization_Gnome_Start_CrushcogsArsenal()
-
+		FinalFantasylization_SnowSong();
 	end
 --			Frostmane Hold
 	function FinalFantasylization_Gnome_Start_FrostmaneHold()
-
+		FinalFantasylization_SnowSong();
 	end
 --			Gnomeregan
 	function FinalFantasylization_Gnome_Start_Gnomeregan()
@@ -1539,7 +1539,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Grizzled Den
 	function FinalFantasylization_SubzoneTheGrizzledDen()
-
+		FinalFantasylization_SnowSong();
 	end
 --	Gol'Bolar Quarry Mine
 	function FinalFantasylization_SubzoneGolBolarQuarryMine()
@@ -1563,7 +1563,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Shimmer Ridge
 	function FinalFantasylization_SubzoneShimmerRidge()
-
+		FinalFantasylization_SnowSong();
 	end
 --	South Gate Pass
 	function FinalFantasylization_SubzoneSouthGatePass()
