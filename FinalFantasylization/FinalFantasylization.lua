@@ -966,9 +966,12 @@ function FinalFantasylization_GetMusic()
 --'==========================================================================================
 --' The Broken Isles Zones
 --'==========================================================================================
-		-- Mardum, the Shattered Abyss ( Demon Hunter Start )
-			elseif ( MapID == 1028 ) then
+		-- Mardum, the Shattered Abyss ( Demon Hunter Start ) / The Fel Hammer
+			elseif ( MapID == 1028 ) or ( MapID == 1052 )then
 				FinalFantasylization_TheBrokenIslesZones_MardumtheShatteredAbyss(SubZoneName)
+		-- Vault of the Wardens
+			elseif ( MapID == 1032 ) then
+				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
 
 	-- Debug: Zone Catch-all
 			elseif not IsInInstance() then

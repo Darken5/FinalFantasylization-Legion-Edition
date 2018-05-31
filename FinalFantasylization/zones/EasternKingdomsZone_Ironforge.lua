@@ -13,7 +13,7 @@ function FinalFantasylization_EasternKingdomsZones_Ironforge()
 --		The Stonefire Tavern		FinalFantasylization_Ironforge_SubzoneTheStonefireTavern()
 --		Vault of Ironforge			FinalFantasylization_Ironforge_SubzoneVaultofIronforge()
 --	The Forlorn Cavern			FinalFantasylization_Ironforge_SubzoneTheForlornCavern()
---	The Gates of Ironforge		FinalFantasylization_Ironforge_SubzoneTheGatesofIronforge()
+--	Gates of Ironforge		FinalFantasylization_Ironforge_SubzoneGatesofIronforge()
 --	The Great Forge				FinalFantasylization_Ironforge_SubzoneTheGreatForge()
 --		The High Seat				FinalFantasylization_Ironforge_SubzoneTheHighSeat()
 --		Cask 'n' Anvil				FinalFantasylization_Ironforge_SubzoneCasknAnvil()
@@ -108,13 +108,13 @@ function FinalFantasylization_EasternKingdomsZones_Ironforge()
 			FinalFantasylization_IsPlaying = true
 			return
 	--'==========================================================================================
-	--' Ironforge: The Gates of Ironforge
+	--' Ironforge: Gates of Ironforge
 	--'==========================================================================================
-		elseif ( SubZoneName == SZ["The Gates of Ironforge"] ) then
+		elseif ( SubZoneName == SZ["Gates of Ironforge"] ) then
 			if FinalFantasylization_CurrentZone ~= SubZoneName then
 				FinalFantasylization_CurrentZone = SubZoneName
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
-				FinalFantasylization_Ironforge_SubzoneTheGatesofIronforge()
+				FinalFantasylization_Ironforge_SubzoneGatesofIronforge()
 			else
 				return
 			end

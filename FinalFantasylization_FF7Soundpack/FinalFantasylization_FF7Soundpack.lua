@@ -223,8 +223,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
---	The Gates of Ironforge
-	function FinalFantasylization_Ironforge_SubzoneTheGatesofIronforge()
+--	Gates of Ironforge
+	function FinalFantasylization_Ironforge_SubzoneGatesofIronforge()
 		FinalFantasylization_PlayMusic(S .. IronforgeSong);
 		FinalFantasylization_debugMsg("IronforgeSong")
 	end
@@ -6780,7 +6780,81 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. BattleGround1);
 		FinalFantasylization_debugMsg("BattleGround1")
 	end
-
+--'==========================================================================================
+--' The Broken Isles Zones: Vault of the Wardens
+--'==========================================================================================
+--	Zone: Vault of the Wardens
+	function FinalFantasylization_TheBrokenIslesVaultoftheWardens()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_TheBrokenIslesVaultoftheWardensResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_TheBrokenIslesVaultoftheWardensSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--
+--	SUBZONES:
+--	Fallen Passage
+	function FinalFantasylization_SubzoneFallenPassage()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Chamber of Night
+	function FinalFantasylization_SubzoneChamberofNight()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	The Demon Ward
+	function FinalFantasylization_SubzoneTheDemonWard()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--		Vault of Ice
+	function FinalFantasylization_SubzoneVaultofIce()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--		Vault of Law
+	function FinalFantasylization_SubzoneVaultofLaw()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--		Vault of Mirrors
+	function FinalFantasylization_SubzoneVaultofMirrors()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Illidari Ward
+	function FinalFantasylization_SubzoneIllidariWard()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--		Vault of Silence
+	function FinalFantasylization_SubzoneVaultofSilence()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Tomb of the Penitent
+	function FinalFantasylization_SubzoneTombofthePenitent()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Vault of the Betrayer
+	function FinalFantasylization_SubzoneVaultoftheBetrayer()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	The Warden's Court
+	function FinalFantasylization_SubzoneTheWardensCourt()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
 
 
 	--#############
