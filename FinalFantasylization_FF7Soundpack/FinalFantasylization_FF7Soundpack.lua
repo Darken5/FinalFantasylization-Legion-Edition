@@ -1448,27 +1448,27 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --			Gnomeregan
 	function FinalFantasylization_Gnome_Start_Gnomeregan()
-
+		FinalFantasylization_HostileSong();
 	end
 --				The Clockwerk Run
 	function FinalFantasylization_Gnome_Start_TheClockwerkRun()
-
+		FinalFantasylization_HostileSong();
 	end
 --				Loading Room
 	function FinalFantasylization_Gnome_Start_LoadingRoom()
-
+		FinalFantasylization_HostileSong();
 	end
 --				The Old Dormitory
 	function FinalFantasylization_Gnome_Start_TheOldDormitory()
-
+		FinalFantasylization_HostileSong();
 	end
 --				Train Depot
 	function FinalFantasylization_Gnome_Start_TrainDepot()
-
+		FinalFantasylization_HostileSong();
 	end
 --				Workshop Entrance
 	function FinalFantasylization_Gnome_Start_WorkshopEntrance()
-
+		FinalFantasylization_HostileSong();
 	end
 --			Iceflow Lake
 	function FinalFantasylization_Gnome_Start_IceflowLake()
@@ -5514,7 +5514,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Blackhoof Village
 	function FinalFantasylization_SubzoneBlackhoofVillage()
-
+		FinalFantasylization_PlayMusic(S .. Alliance10Town);
+		FinalFantasylization_debugMsg("Alliance10Town")
 	end
 --	Bloodfen Burrow
 	function FinalFantasylization_SubzoneBloodfenBurrow()
@@ -5530,7 +5531,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Dragonmurk
 	function FinalFantasylization_SubzoneTheDragonmurk()
-
+		FinalFantasylization_SwampSong()
 	end
 --		The Den of Flame
 	function FinalFantasylization_SubzoneTheDenofFlame()
@@ -5538,7 +5539,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Stonemaul Ruins
 	function FinalFantasylization_SubzoneStonemaulRuins()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Dreadmurk Shore
 	function FinalFantasylization_SubzoneDreadmurkShore()
@@ -5574,11 +5575,12 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Beezil's Wreck
 	function FinalFantasylization_SubzoneBeezilsWreck()
-
+		FinalFantasylization_SwampSong()
 	end
 --		Direhorn Post
 	function FinalFantasylization_SubzoneDirehornPost()
-
+		FinalFantasylization_PlayMusic(S .. Alliance10Town);
+		FinalFantasylization_debugMsg("Alliance10Town")
 	end
 --	Sentry Point
 	function FinalFantasylization_SubzoneSentryPoint()
@@ -6013,7 +6015,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	The Great Divide
 	function FinalFantasylization_SubzoneTheGreatDivide()
-
+		FinalFantasylization_LandSong();
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
@@ -6693,6 +6695,93 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_Goblin_Start_VolcanothsLair()
 
 	end
+
+
+
+
+--###########################################################################################
+--##   THE BROKEN ISLES ZONES
+--###########################################################################################
+--'==========================================================================================
+--' The Broken Isles Zones: Mardum, the Shattered Abyss (Demon Hunter Start)
+--'==========================================================================================
+--	Zone: Mardum, the Shattered Abyss
+	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyss()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Zone Events:
+--		Player is Resting
+	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssResting()
+		FinalFantasylization_Sleeping()
+	end
+--		Player is Swimming
+	function FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssSwimming()
+		FinalFantasylization_Swimming(2)
+	end
+--	SUBZONES:
+--	Cryptic Hollow
+	function FinalFantasylization_SubzoneCrypticHollow()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Despair Ridge
+	function FinalFantasylization_SubzoneDespairRidge()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	The Doom Fortress
+	function FinalFantasylization_SubzoneTheDoomFortress()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	The Fel Hammer
+	function FinalFantasylization_SubzoneTheFelHammer()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Forge of Corruption
+	function FinalFantasylization_SubzoneForgeofCorruption()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Foul Creche
+	function FinalFantasylization_SubzoneFoulCreche()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Illidari Foothold
+	function FinalFantasylization_SubzoneIllidariFoothold()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Inferno Peak
+	function FinalFantasylization_SubzoneInfernoPeak()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Molten Shore
+	function FinalFantasylization_SubzoneMoltenShore()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Seat of Command
+	function FinalFantasylization_SubzoneSeatofCommand()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Soul Engine
+	function FinalFantasylization_SubzoneSoulEngine()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+--	Twisting Nether
+	function FinalFantasylization_SubzoneTwistingNether()
+		FinalFantasylization_PlayMusic(S .. BattleGround1);
+		FinalFantasylization_debugMsg("BattleGround1")
+	end
+
+
 
 	--#############
 	--## PVP ZONES

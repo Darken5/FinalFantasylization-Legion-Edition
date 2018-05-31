@@ -50,8 +50,20 @@
 	<Script file="KalimdorZone_StonetalonMountains.lua"/>
 	<Script file="KalimdorZone_Teldrassil.lua"/>
 	<Script file="KalimdorZone_ThunderBluff.lua"/>
-	
+
+	<!--Outland-->
+
+	<!--Northrend-->
+
 	<!--Maelstrom-->
 	<Script file="MaelstromZone_Kezan.lua"/>
 	<Script file="MaelstromZone_TheLostIsles.lua"/>
+
+	<!--Pandaria-->
+
+	<!--Draenor-->
+
+	<!--The Broken Isles-->
+	<Script file="TheBrokenIslesZone_MardumtheShatteredAbyss.lua"/>
+
 </Ui>
