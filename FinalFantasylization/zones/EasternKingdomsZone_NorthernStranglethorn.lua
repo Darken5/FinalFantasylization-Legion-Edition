@@ -339,7 +339,7 @@ function FinalFantasylization_EasternKingdomsZones_NorthernStranglethorn()
 	--'==========================================================================================
 	--' Northern Stranglethorn Subzone: Venture Co. Base Camp
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Venture Co Base Camp"] ) then
+	elseif ( SubZoneName == SZ["Venture Co. Base Camp"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
