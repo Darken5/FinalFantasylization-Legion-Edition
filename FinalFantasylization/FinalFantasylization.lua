@@ -808,6 +808,9 @@ function FinalFantasylization_GetMusic()
 		-- Cape of Stranglethorn
 			elseif ( MapID == 673 ) then
 				FinalFantasylization_EasternKingdomsZones_CapeofStranglethorn(SubZoneName)
+		-- Deadwind Pass
+			elseif ( MapID == 32 ) then
+				FinalFantasylization_EasternKingdomsZones_DeadwindPass(SubZoneName)
 		-- Deeprun Tram
 			elseif ( MinimapZoneName == SZ["Deeprun Tram"] ) then
 				FinalFantasylization_EasternKingdomsZones_DeeprunTram()
@@ -865,6 +868,9 @@ function FinalFantasylization_GetMusic()
 		-- Stormwind City
 			elseif ( MapID == 301 ) and not IsInInstance() then
 				FinalFantasylization_EasternKingdomsZones_StormwindCity(SubZoneName)
+		-- Swamp of Sorrows
+			elseif ( MapID == 38 ) then
+				FinalFantasylization_EasternKingdomsZones_SwampofSorrows(SubZoneName)
 		-- Tirisfal Glades - Deathknell ( Undead )
 			elseif ( MapID == 20 ) or ( MapID == 892 ) then
 				FinalFantasylization_EasternKingdomsZones_TirisfalGlades(SubZoneName)
@@ -974,7 +980,7 @@ function FinalFantasylization_GetMusic()
 				FinalFantasylization_TheBrokenIslesZones_VaultoftheWardens(SubZoneName)
 
 	-- Debug: Zone Catch-all
-			elseif not IsInInstance() then
+			elseif not ( IsInInstance() or ( MapID == 13 ) or ( MapID == 14 ) or ( MapID == 751 ) )then
 				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
 			end
 		end
