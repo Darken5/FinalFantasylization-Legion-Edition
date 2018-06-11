@@ -4142,23 +4142,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
 		FinalFantasylization_debugMsg("ThunderBluffSong")
 	end
---	High Rise
-	function FinalFantasylization_ThunderBluff_SubzoneHighRise()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
 --	Hunter Rise
 	function FinalFantasylization_ThunderBluff_SubzoneHunterRise()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---	Lower Rise
-	function FinalFantasylization_ThunderBluff_SubzoneLowerRise()
-		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
-		FinalFantasylization_debugMsg("ThunderBluffSong")
-	end
---	Middle Rise
-	function FinalFantasylization_ThunderBluff_SubzoneMiddleRise()
 		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
 		FinalFantasylization_debugMsg("ThunderBluffSong")
 	end
@@ -4167,8 +4152,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
 		FinalFantasylization_debugMsg("ThunderBluffSong")
 	end
---		Pools of Vision
-	function FinalFantasylization_ThunderBluff_SubzonePoolsofVision()
+--		The Pools of Vision
+	function FinalFantasylization_ThunderBluff_SubzoneThePoolsofVision()
 		FinalFantasylization_PlayMusic(S .. ThunderBluffSong);
 		FinalFantasylization_debugMsg("ThunderBluffSong")
 	end
@@ -5722,7 +5707,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Bloodfen Burrow
 	function FinalFantasylization_SubzoneBloodfenBurrow()
-
+		FinalFantasylization_SwampSong()
 	end
 --	Bluefen
 	function FinalFantasylization_SubzoneBluefen()
@@ -5738,7 +5723,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		The Den of Flame
 	function FinalFantasylization_SubzoneTheDenofFlame()
-
+		FinalFantasylization_SwampSong()
 	end
 --		Stonemaul Ruins
 	function FinalFantasylization_SubzoneStonemaulRuins()
@@ -5787,7 +5772,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Sentry Point
 	function FinalFantasylization_SubzoneSentryPoint()
-
+		FinalFantasylization_AllianceTowns();
 	end
 --	Shady Rest Inn
 	function FinalFantasylization_SubzoneShadyRestInn()
@@ -5804,15 +5789,15 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Wyrmbog
 	function FinalFantasylization_SubzoneWyrmbog()
-
+		FinalFantasylization_SwampSong()
 	end
 --		Emberstrife's Den
 	function FinalFantasylization_SubzoneEmberstrifesDen()
-
+		FinalFantasylization_CaveSong()
 	end
 --		Onyxia's Lair
 	function FinalFantasylization_SubzoneOnyxiasLair()
-
+		FinalFantasylization_CaveSong()
 	end
 --'==========================================================================================
 --' Kalimdor Zones: Feralas
@@ -6039,8 +6024,8 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	function FinalFantasylization_Tauren_Start_FargazeMesa()
 
 	end
---			Thormantle's Hideout
-	function FinalFantasylization_Tauren_Start_ThormantlesHideout()
+--			Thornmantle's Hideout
+	function FinalFantasylization_Tauren_Start_ThornmantlesHideout()
 
 	end
 --			The Thornsnarl

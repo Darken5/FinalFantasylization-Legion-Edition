@@ -15,7 +15,7 @@ function FinalFantasylization_EasternKingdomsZones_Wetlands()
 --			Deepwater Tavern		FinalFantasylization_AllianceTownDeepwaterTavern()
 --			Menethil Keep			FinalFantasylization_AllianceTownMenethilKeep()
 --		Slabchisel's Survey		FinalFantasylization_AllianceTownSlabchiselsSurvey()
-		Swiftgear Station
+--		Swiftgear Station		FinalFantasylization_AllianceTownSwiftgearStation()
 --		Whelgar's Retreat		FinalFantasylization_AllianceTownWhelgarsRetreat()
 --
 --	SUBZONES:
