@@ -5698,7 +5698,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 --	SUBZONES:
 --	Alcaz Island
 	function FinalFantasylization_SubzoneAlcazIsland()
-
+		FinalFantasylization_ForestSong()
 	end
 --	Blackhoof Village
 	function FinalFantasylization_SubzoneBlackhoofVillage()
@@ -5739,11 +5739,11 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --		Nat's Landing
 	function FinalFantasylization_SubzoneNatsLanding()
-
+		FinalFantasylization_BeachSong()
 	end
 --		Tidefury Cove
 	function FinalFantasylization_SubzoneTidefuryCove()
-
+		FinalFantasylization_WaterSong()
 	end
 --	The Great Sea
 	function FinalFantasylization_SubzoneTheGreatSea()
@@ -5751,7 +5751,7 @@ _G["SoundPack" .. soundPackID  .. "_SetEnabled"] = function(enabled)
 	end
 --	Lost Point
 	function FinalFantasylization_SubzoneLostPoint()
-
+		FinalFantasylization_SwampSong()
 	end
 --	North Point Tower
 	function FinalFantasylization_SubzoneNorthPointTower()
