@@ -942,6 +942,9 @@ function FinalFantasylization_GetMusic()
 		-- Teldrassil - Shadowglen ( Night Elf )
 			elseif ( MapID == 41 ) or ( MapID == 888 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
+		-- Thousand Needles
+			elseif ( MapID == 61 ) then
+				FinalFantasylization_KalimdorZones_ThousandNeedles(SubZoneName)
 		-- Thunder Bluff
 			elseif ( MapID == 362 ) then
 				FinalFantasylization_KalimdorZones_ThunderBluff(SubZoneName)
