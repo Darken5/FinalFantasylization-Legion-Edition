@@ -1,202 +1,264 @@
-function FinalFantasylization_TheBrokenIslesZones_MardumtheShatteredAbyss()
+function FinalFantasylization_KalimdorZones_UnGoroCrater()
 --'==========================================================================================
---' The Broken Isles Zones: Mardum, the Shattered Abyss ( Demon Hunter Start )
+--' Kalimdor Zones: Un'Goro Crater
 --'==========================================================================================
---	Zone: Mardum, the Shattered Abyss			FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyss()
+--	Zone: Un'Goro Crater			FinalFantasylization_KalimdorUnGoroCrater()
 --
 --	Zone Events:
---		Player is Resting		FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssResting()
---		Player is Swimming		FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssSwimming()
+--		Player is Resting		FinalFantasylization_KalimdorUnGoroCraterResting()
+--		Player is Swimming		FinalFantasylization_KalimdorUnGoroCraterSwimming()
+--
+--	TOWNS:
+--	Neutral:
+--		Marshal's Stand			FinalFantasylization_NeutralTownMarshalsStand()
+--		Mossy Pile				FinalFantasylization_NeutralTownMossyPile()
 --
 --	SUBZONES:
---	Cryptic Hollow			FinalFantasylization_SubzoneCrypticHollow()
---	Despair Ridge			FinalFantasylization_SubzoneDespairRidge()
---	The Doom Fortress		FinalFantasylization_SubzoneTheDoomFortress()
---	The Fel Hammer			FinalFantasylization_SubzoneTheFelHammer()
---	Forge of Corruption		FinalFantasylization_SubzoneForgeofCorruption()
---	Foul Creche				FinalFantasylization_SubzoneFoulCreche()
---	Illidari Foothold		FinalFantasylization_SubzoneIllidariFoothold()
---	Inferno Peak			FinalFantasylization_SubzoneInfernoPeak()
---	Molten Shore			FinalFantasylization_SubzoneMoltenShore()
---	Seat of Command			FinalFantasylization_SubzoneSeatofCommand()
---	Soul Engine				FinalFantasylization_SubzoneSoulEngine()
---	Twisting Nether			FinalFantasylization_SubzoneTwistingNether()
+--	Fire Plume Ridge			FinalFantasylization_SubzoneFirePlumeRidge()
+--	Fungal Rock					FinalFantasylization_SubzoneFungalRock()
+--	Golakka Hot Springs			FinalFantasylization_SubzoneGolakkaHotSprings()
+--	Ironstone Plateau			FinalFantasylization_SubzoneIronstonePlateau()
+--	Lakkari Tar Pits			FinalFantasylization_SubzoneLakkariTarPits()
+--	Marshal's Refuge			FinalFantasylization_SubzoneMarshalsRefuge()
+--	The Marshlands				FinalFantasylization_SubzoneTheMarshlands()
+--	The Roiling Gardens			FinalFantasylization_SubzoneTheRoilingGardens()
+--	The Screaming Reaches		FinalFantasylization_SubzoneTheScreamingReaches()
+--	The Shaper's Terrace		FinalFantasylization_SubzoneTheShapersTerrace()
+--	The Slithering Scar			FinalFantasylization_SubzoneTheSlitheringScar()
+--	Terror Run					FinalFantasylization_SubzoneTerrorRun()
+--	Waygate 					FinalFantasylization_SubzoneWaygate()
+	--'==========================================================================================
+	--'	Zone Event: Player is Resting
+	--'==========================================================================================
+	if ( IsResting() ) and FinalFantasylizationOptions.Sleep == true and ( pvpType == "friendly" or pvpType == "hostile" or pvpType == "sanctuary" or pvpType == "contested" or pvpType == nil or pvpType == "") then
+		if FinalFantasylization_CurrentZone ~= "Sleeping" then
+			if ( factionEnglish == "Alliance" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. AllianceRest)
+			elseif ( factionEnglish == "Horde" ) then
+				FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. HordeRest)
+			end
+			FinalFantasylization_CurrentZone = "Sleeping"
+			FinalFantasylization_KalimdorUnGoroCraterResting()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
 	--'==========================================================================================
 	--'	Zone Event: Player is Swimming
 	--'==========================================================================================
-	if IsSwimming() and FinalFantasylizationOptions.Swim == true then
+	elseif IsSwimming() and FinalFantasylizationOptions.Swim == true then
 		if FinalFantasylization_CurrentZone ~= "Swimming" then
 			FinalFantasylization_CurrentZone = "Swimming"
-			FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyssSwimming()
+			FinalFantasylization_KalimdorUnGoroCraterSwimming()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Cryptic Hollow
+	--' Un'Goro Crater Neutral Town: Marshal's Stand
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Cryptic Hollow"] ) then
+	elseif ( SubZoneName == SZ["Marshal's Stand"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneCrypticHollow()
+			FinalFantasylization_NeutralTownMarshalsStand()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Despair Ridge
+	--' Un'Goro Crater Neutral Town: Mossy Pile
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Despair Ridge"] ) then
+	elseif ( SubZoneName == SZ["Mossy Pile"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneDespairRidge()
+			FinalFantasylization_NeutralTownMossyPile()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: The Doom Fortress
+	--' Un'Goro Crater Subzone: Fire Plume Ridge
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Doom Fortress"] ) then
+	elseif ( SubZoneName == SZ["Fire Plume Ridge"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheDoomFortress()
+			FinalFantasylization_SubzoneFirePlumeRidge()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: The Fel Hammer
+	--' Un'Goro Crater Subzone: Fungal Rock
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["The Fel Hammer"] ) then
+	elseif ( SubZoneName == SZ["Fungal Rock"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTheFelHammer()
+			FinalFantasylization_SubzoneFungalRock()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Forge of Corruption
+	--' Un'Goro Crater Subzone: Golakka Hot Springs
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Forge of Corruption"] ) then
+	elseif ( SubZoneName == SZ["Golakka Hot Springs"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneForgeofCorruption()
+			FinalFantasylization_SubzoneGolakkaHotSprings()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Foul Creche
+	--' Un'Goro Crater Subzone: Ironstone Plateau
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Foul Creche"] ) then
+	elseif ( SubZoneName == SZ["Ironstone Plateau"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneFoulCreche()
+			FinalFantasylization_SubzoneIronstonePlateau()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Illidari Foothold
+	--' Un'Goro Crater Subzone: Lakkari Tar Pits
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Illidari Foothold"] ) then
+	elseif ( SubZoneName == SZ["Lakkari Tar Pits"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneIllidariFoothold()
+			FinalFantasylization_SubzoneLakkariTarPits()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Inferno Peak
+	--' Un'Goro Crater Subzone: Marshal's Refuge
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Inferno Peak"] ) then
+	elseif ( SubZoneName == SZ["Marshal's Refuge"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneInfernoPeak()
+			FinalFantasylization_SubzoneMarshalsRefuge()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Molten Shore
+	--' Un'Goro Crater Subzone: The Marshlands
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Molten Shore"] ) then
+	elseif ( SubZoneName == SZ["The Marshlands"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneMoltenShore()
+			FinalFantasylization_SubzoneTheMarshlands()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Seat of Command
+	--' Un'Goro Crater Subzone: The Roiling Gardens
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Seat of Command"] ) then
+	elseif ( SubZoneName == SZ["The Roiling Gardens"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSeatofCommand()
+			FinalFantasylization_SubzoneTheRoilingGardens()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Soul Engine
+	--' Un'Goro Crater Subzone: The Screaming Reaches
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Soul Engine"] ) then
+	elseif ( SubZoneName == SZ["The Screaming Reaches"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneSoulEngine()
+			FinalFantasylization_SubzoneTheScreamingReaches()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss Subzone: Twisting Nether
+	--' Un'Goro Crater Subzone: The Shaper's Terrace
 	--'==========================================================================================
-	elseif ( SubZoneName == SZ["Twisting Nether"] ) then
+	elseif ( SubZoneName == SZ["The Shaper's Terrace"] ) then
 		if FinalFantasylization_CurrentZone ~= SubZoneName then
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
 			FinalFantasylization_CurrentZone = SubZoneName
-			FinalFantasylization_SubzoneTwistingNether()
+			FinalFantasylization_SubzoneTheShapersTerrace()
 		else
 			return
 		end
 		FinalFantasylization_IsPlaying = true
 		return
 	--'==========================================================================================
-	--' Mardum, the Shattered Abyss END
+	--' Un'Goro Crater Subzone: The Slithering Scar
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["The Slithering Scar"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTheSlitheringScar()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Un'Goro Crater Subzone: Terror Run
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Terror Run"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneTerrorRun()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Un'Goro Crater Subzone: Waygate
+	--'==========================================================================================
+	elseif ( SubZoneName == SZ["Waygate"] ) then
+		if FinalFantasylization_CurrentZone ~= SubZoneName then
+			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. SubZoneName..", "..ZoneName)
+			FinalFantasylization_CurrentZone = SubZoneName
+			FinalFantasylization_SubzoneWaygate()
+		else
+			return
+		end
+		FinalFantasylization_IsPlaying = true
+		return
+	--'==========================================================================================
+	--' Un'Goro Crater END
 	--'==========================================================================================
 	else
 		if FinalFantasylization_CurrentZone ~= ZoneName then
 			FinalFantasylization_CurrentZone = ZoneName
 			FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. PlayerIn.. ZoneName)
-			FinalFantasylization_TheBrokenIslesMardumtheShatteredAbyss()
+			FinalFantasylization_KalimdorUnGoroCrater()
 			FinalFantasylization_IsPlaying = true
 		else
 			return

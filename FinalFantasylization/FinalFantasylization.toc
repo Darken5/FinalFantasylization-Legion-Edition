@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 80000
 ## Version: 7.0.0
 ## Title: FinalFantasylization 7.0.0
 ## Notes: FinalFantasylization plays music and sounds based on different in-game events

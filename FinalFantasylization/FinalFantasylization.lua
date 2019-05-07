@@ -43,7 +43,7 @@ LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("FinalFantasylization", {
 function FinalFantasylization_OnLoad()
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_LEAVING_WORLD") -- Fires when the player logs out or exits a world area.
 	FinalFantasylizationFrame:RegisterEvent("PLAYER_ALIVE") -- This event fires after PLAYER_ENTERING_WORLD
-	FinalFantasylizationFrame:RegisterEvent("WORLD_MAP_UPDATE") -- Fired when the world map should be updated. When entering a battleground, this event won't fire until the zone is changed (i.e. in WSG when you walk outside of Warsong Lumber Mill or Silverwing Hold)
+--	FinalFantasylizationFrame:RegisterEvent("WORLD_MAP_UPDATE") -- Fired when the world map should be updated. When entering a battleground, this event won't fire until the zone is changed (i.e. in WSG when you walk outside of Warsong Lumber Mill or Silverwing Hold)
 	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED") -- Fired when the player enters a new zone. Zones are the smallest named subdivions of the game world and are contained within areas (also called regions). Whenever the text over the minimap changes, this event is fired. 
 	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED_INDOORS") -- Fired when a player enters a new zone within a city. 
 	FinalFantasylizationFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA") -- Fired when the user enters a new zone and a new area. e.g. moving from Duskwood to Stranglethorn Vale.
@@ -133,7 +133,7 @@ function FinalFantasylization_OnEvent(self, event, ...)
 		end
 	elseif event == "SPELLS_CHANGED" then
 	elseif event == "PLAYER_ALIVE" then
-	elseif event == "WORLD_MAP_UPDATE" then
+--	elseif event == "WORLD_MAP_UPDATE" then
 	elseif event == "PLAYER_REGEN_DISABLED" then
 		FinalFantasylization_debugMsg(FFZlib.Color.Yellow .. EnterCombat)
 		if FinalFantasylizationOptions.Enabled == true then
@@ -359,11 +359,11 @@ function FinalFantasylization_Command(Command)
 			FFZlib.Message(FFZlib.Color.Yellow .. BattlegroundOnMessage)
 		end
 	elseif Lower == TestCommand then
-		ZoneName = GetMapNameByID(GetCurrentMapAreaID());
+		ZoneName = GetMapNameByID( C_Map.GetBestMapForUnit("player") );
 		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText()
 		SubZoneName = GetSubZoneText()
-		areaID = GetCurrentMapAreaID()
+		areaID = GetCurrentMapAreaID
 		local realm = GetRealmName();
 		local factionEnglish, factionLocale = UnitFactionGroup("player"); --'Horde, Alliance
 		local pvpType, isFFA, faction = GetZonePVPInfo(); --'("friendly";"contested";"hostile";"sanctuary") (1;nil) ("Alliance";"Horde")
@@ -570,7 +570,7 @@ end
 function FinalFantasylization_GetMusic()
 
 	if FinalFantasylizationOptions.Enabled == true and startFinalfantasylization == true then
-		ZoneName = GetMapNameByID(GetCurrentMapAreaID());
+		ZoneName = GetMapNameByID( C_Map.GetBestMapForUnit("player"));
 		ZoneName2 = GetRealZoneText();
 		MinimapZoneName = GetMinimapZoneText()
 		SubZoneName = GetSubZoneText()
@@ -578,7 +578,7 @@ function FinalFantasylization_GetMusic()
 		classification = UnitClassification("target"); --'classification: "worldboss", "rareelite", "elite", "rare", "normal" or "trivial"
 		pvpType, isFFA, faction = GetZonePVPInfo(); --'("friendly";"contested";"hostile";"sanctuary") (1;nil) ("Alliance";"Horde")
 		ZoneText = GetZoneText()
-		MapID = GetCurrentMapAreaID()
+		MapID =  C_Map.GetBestMapForUnit("player")
 
 --'==========================================================================================
 --'	Sounds
@@ -921,6 +921,9 @@ function FinalFantasylization_GetMusic()
 		-- The Exodar
 			elseif ( MapID == 471 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
+		-- Felwood
+			elseif ( MapID == 182 ) then
+				FinalFantasylization_KalimdorZones_Felwood(SubZoneName)
 		-- Feralas
 			elseif ( MapID == 121 ) then
 				FinalFantasylization_KalimdorZones_TheExodar(SubZoneName)
@@ -939,6 +942,9 @@ function FinalFantasylization_GetMusic()
 		-- Stonetalon Mountains
 			elseif ( MapID == 81 ) then
 				FinalFantasylization_KalimdorZones_StonetalonMountains(SubZoneName)
+		-- Tanaris
+			elseif ( MapID == 161 ) then
+				FinalFantasylization_KalimdorZones_Tanaris(SubZoneName)
 		-- Teldrassil - Shadowglen ( Night Elf )
 			elseif ( MapID == 41 ) or ( MapID == 888 ) then
 				FinalFantasylization_KalimdorZones_Teldrassil(SubZoneName)
@@ -948,6 +954,15 @@ function FinalFantasylization_GetMusic()
 		-- Thunder Bluff
 			elseif ( MapID == 362 ) then
 				FinalFantasylization_KalimdorZones_ThunderBluff(SubZoneName)
+		-- Uldum
+			elseif ( MapID == 720 ) then
+				FinalFantasylization_KalimdorZones_Uldum(SubZoneName)
+		-- Un'Goro Crater
+			elseif ( MapID == 201 ) then
+				FinalFantasylization_KalimdorZones_UnGoroCrater(SubZoneName)
+		-- Winterspring
+			elseif ( MapID == 281 ) then
+				FinalFantasylization_KalimdorZones_Winterspring(SubZoneName)
 
 --'==========================================================================================
 --' Outland
@@ -987,7 +1002,7 @@ function FinalFantasylization_GetMusic()
 
 	-- Debug: Zone Catch-all
 			elseif not ( IsInInstance() or ( MapID == 13 ) or ( MapID == 14 ) or ( MapID == 751 ) )then
-				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. "Zone not in FinalFantasylization")
+				FinalFantasylization_debugMsg(FFZlib.Color.Aqua .. ZoneName .. " - (ID " .. MapID .. ") " .. "not in FinalFantasylization")
 			end
 		end
 --###########################################################################################

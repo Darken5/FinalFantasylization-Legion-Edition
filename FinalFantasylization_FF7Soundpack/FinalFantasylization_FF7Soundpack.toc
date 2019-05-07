@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 80000
 ## Version: 7.0.0 
 ## Title: FinalFantasylization [|cff8ec3e6Final Fantasy 7|r] |ff33007.0.0|r
 ## Notes: Soundpack for FinalFantasylization based on Final Fantasy 7.
